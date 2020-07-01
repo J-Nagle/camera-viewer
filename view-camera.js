@@ -21,7 +21,7 @@ document.addEventListener('readystatechange', (event) => {
 			window.alert('Error: ', error);
 		}
 
-		navigator.mediaDevices.getUserMedia({ audio: false, video: {faceingMode:"environment"} })
+		navigator.mediaDevices.getUserMedia({ audio: false, video: {facingMode:"environment"} })
 		  .then(successCallback)
 		  .catch(errorCallback);
 
