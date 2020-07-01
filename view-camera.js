@@ -21,7 +21,7 @@ document.addEventListener('readystatechange', (event) => {
 			window.alert('Error: ', error);
 		}
 
-		navigator.mediaDevices.getUserMedia({ audio: false, video: true })
+		navigator.mediaDevices.getUserMedia({ audio: false, video: {faceingMode:"environment"} })
 		  .then(successCallback)
 		  .catch(errorCallback);
 
@@ -43,7 +43,7 @@ document.addEventListener('readystatechange', (event) => {
 		video.addEventListener('dblclick',event => {
 				console.log('clicked on video');
 				console.log(cameras);
-				alert(camId);
+				console.log(camId);
 				console.log(currentStream);
 			if((camId + 1) < cameras.length) {
 				camId = camId +1;
